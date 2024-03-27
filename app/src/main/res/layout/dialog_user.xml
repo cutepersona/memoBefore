@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:contentDescription="hf_no_number"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="600dp"
+        android:layout_height="320dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/background_color_ract_round_selector1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="111dp"
+            android:layout_height="167dp"
+            android:layout_marginStart="47dp"
+            android:background="@drawable/icon_cahtbot_komipo"
+            app:layout_constraintBottom_toBottomOf="@+id/dialog_top_txt_lin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/dialog_top_txt_lin" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/dialog_top_txt_lin"
+            android:layout_width="397dp"
+            android:layout_height="176dp"
+            android:layout_marginStart="168dp"
+            android:layout_marginTop="39dp"
+            android:background="@drawable/bubblebox"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/dialog_title_txt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="54dp"
+                android:layout_marginTop="34dp"
+                android:layout_marginEnd="43dp"
+                android:maxWidth="270dp"
+                android:text="Title"
+                android:textColor="@android:color/black"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/dialog_content_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:gravity="start"
+                android:maxWidth="320dp"
+                android:text="Content"
+                android:textColor="@android:color/black"
+                android:textSize="22sp"
+                app:layout_constraintStart_toStartOf="@+id/dialog_title_txt"
+                app:layout_constraintTop_toBottomOf="@+id/dialog_title_txt" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/dialog_bottom_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:gravity="start"
+            android:maxWidth="320dp"
+            android:text="0"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dialog_top_txt_lin" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dialog_top_txt_lin"
+            android:weightSum="3"
+            >
+
+            <TextView
+                android:id="@+id/dialog_bottom_btn3"
+                android:layout_width="144dp"
+                android:layout_height="42dp"
+                android:layout_margin="10dp"
+                android:background="#8F8F8F"
+                android:gravity="center"
+                android:text="변경"
+                android:textColor="@android:color/white"
+                android:textSize="22sp"
+                />
+
+            <TextView
+                android:id="@+id/dialog_bottom_btn1"
+                android:layout_width="144dp"
+                android:layout_height="42dp"
+                android:background="#004EA7"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:text="취소"
+                android:textColor="@android:color/white"
+                android:textSize="22sp"
+                />
+
+
+
+            <TextView
+                android:id="@+id/dialog_bottom_btn2"
+                android:layout_width="144dp"
+                android:layout_height="42dp"
+                android:layout_margin="10dp"
+                android:background="#E10000"
+                android:gravity="center"
+                android:text="확인"
+                android:textColor="@android:color/white"
+                android:textSize="22sp"
+                />
+        </LinearLayout>
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

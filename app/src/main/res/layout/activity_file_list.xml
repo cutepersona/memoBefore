@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/power_memo_bg"
+    android:orientation="vertical">
+
+
+<!--    android:layout_height="60px"-->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        >
+
+        <ImageView
+            android:layout_width="10px"
+            android:layout_height="13px"
+            android:layout_gravity="center|left"
+            android:layout_marginStart="37px"
+            android:background="@drawable/common_title_icon_arrow"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/tv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|left"
+            android:layout_marginStart="64px"
+            android:contentDescription="hf_no_number"
+            android:text="@string/go_back"
+            android:textColor="@android:color/white"
+            android:textSize="22px"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_file_list_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/gallery"
+            android:textColor="@android:color/white"
+            android:textSize="30px"
+            android:textStyle="bold" />
+
+        <FrameLayout
+            android:id="@+id/ll_command"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="right|center"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/tv_now_page_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/page"
+                android:textColor="@color/colorWhite"
+                android:textSize="19px"
+                android:layout_marginRight="3px"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_now_page"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="12px"
+                android:textSize="19px"
+                android:text="1"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bt_go_to_page"
+                android:gravity="center"
+                android:layout_marginRight="28px"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_en_page"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5px"
+                    android:contentDescription="hf_no_number"
+                    android:text="@string/go_to_page"
+                    android:textSize="19px"
+                    android:textColor="@color/colorWhite"
+                    android:visibility="gone"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_move_page"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="hf_no_number"
+                    android:text="1"
+                    android:textSize="20px"
+                    android:textColor="@color/colorWhite"
+                    android:layout_marginRight="3px"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:id="@+id/tv_kr_page"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5px"
+                    android:contentDescription="hf_no_number"
+                    android:text="@string/go_to_page"
+                    android:textSize="19px"
+                    android:textColor="@color/colorWhite"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </FrameLayout>
+
+<!--    android:layout_height="match_parent"-->
+    <FrameLayout
+        android:contentDescription="hf_no_number"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="7"
+        >
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <ImageView
+            android:id="@+id/iv_select_box"
+            android:layout_width="510px"
+            android:layout_height="310px"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:background="@drawable/list_box" />
+
+        <TextView
+            android:id="@+id/tv_select"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|bottom"
+            android:layout_marginBottom="13px"
+            android:background="@drawable/bt_select"
+            android:gravity="center"
+            android:text="@string/select"
+            android:textColor="@android:color/white"
+            android:textSize="20px"
+            android:visibility="gone"
+            android:textStyle="bold" />
+
+
+    </FrameLayout>
+
+</LinearLayout>

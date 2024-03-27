@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/power_memo_bg"
+    android:contentDescription="hf_no_ptt_home"
+    android:orientation="vertical">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:contentDescription="hf_no_number"
+        android:layout_weight="1"
+        android:layout_height="0px">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|left"
+            android:layout_marginStart="30.1px"
+            android:background="@drawable/icon_finish"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/tv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|left"
+            android:layout_marginStart="46px"
+            android:text="@string/finish"
+            android:textColor="@android:color/white"
+            android:textSize="20px"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_memo_list_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/memo_list"
+            android:textColor="@android:color/white"
+            android:textSize="26px"
+            android:textStyle="bold" />
+
+        <FrameLayout
+            android:id="@+id/ll_command"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="right|center"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/tv_now_page_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="3px"
+                android:text="@string/page"
+                android:textColor="@color/colorWhite"
+                android:textSize="19px"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_now_page"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="12px"
+                android:text="1"
+                android:textColor="@color/colorWhite"
+                android:textSize="19px"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="28px"
+                android:background="@drawable/bt_go_to_page"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_en_page"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5px"
+                    android:contentDescription="hf_no_number"
+                    android:text="@string/go_to_page"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="19px"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_move_page"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="3px"
+                    android:contentDescription="hf_no_number"
+                    android:text="1"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="20px"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:id="@+id/tv_kr_page"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5px"
+                    android:contentDescription="hf_no_number"
+                    android:text="@string/go_to_page"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="19px"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:contentDescription="hf_no_number"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="7"
+        >
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom" />
+
+
+        <TextView
+            android:id="@+id/tv_create_memo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginTop="12px"
+            android:layout_marginRight="28px"
+            android:background="@drawable/bt_create_memo"
+            android:gravity="center"
+            android:padding="4px"
+            android:text="@string/create_new_memo"
+            android:textColor="@color/colorWhite"
+            android:textSize="18px"
+            android:textStyle="bold"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/tv_create_memo_command"
+            android:layout_width="1dp"
+            android:layout_height="1dp"
+            android:text="신규메모작성"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="28px"
+            android:layout_marginTop="12px"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/tv_sort"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bt_sort_1"
+                android:gravity="center"
+                android:text="@string/sort"
+                android:textColor="@color/colorWhite"
+                android:textSize="18px"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_sort_contents"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bt_sort_2"
+                android:gravity="center"
+                android:text="@string/all_memo_asc"
+                android:textColor="@color/colorWhite"
+                android:textSize="18px"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_select_box"
+            android:layout_width="510px"
+            android:layout_height="310px"
+            android:layout_gravity="center"
+            android:background="@drawable/list_box"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_select"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|bottom"
+            android:layout_marginBottom="13px"
+            android:background="@drawable/bt_select"
+            android:gravity="center"
+            android:text="@string/select"
+            android:textColor="@android:color/white"
+            android:textSize="20px"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_refresh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|bottom"
+            android:layout_marginLeft="28px"
+            android:layout_marginBottom="13px"
+            android:background="@drawable/bt_refresh"
+            android:gravity="center"
+            android:text="@string/refresh"
+            android:textColor="#707070"
+            android:textSize="20px"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/ll_upload_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom"
+            android:layout_marginEnd="28dp"
+            android:layout_marginBottom="13dp"
+            >
+
+            <ImageView
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:src="@drawable/progress_circle_blue"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8.3dp"
+                android:gravity="center"
+                android:text="@string/uploading"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/uploading_percent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginStart="4dp"
+                android:text="(0%)"
+                android:textSize="20sp"
+                android:textColor="#000000"
+                />
+
+        </LinearLayout>
+
+
+
+    </FrameLayout>
+
+</LinearLayout>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="500dp"
+        android:layout_height="220dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintCircleRadius="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Loading"
+            android:textSize="26sp"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:id="@+id/progressText"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="100/100"
+            android:textSize="20sp"
+            android:gravity="center"
+            />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:max="100"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_width="400dp"
+            android:layout_height="50dp"
+            android:minHeight="50dp"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            />
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

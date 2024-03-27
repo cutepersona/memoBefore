@@ -1,0 +1,178 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'kotlinx-serialization'
+}
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        applicationId "com.peng.power.memo"
+        minSdkVersion 26
+        targetSdkVersion 30
+        versionCode 60
+        versionName "1.0.50"                // 2023-02-10      v1.0.39      // 2023-06-22    v1.0.41      // 2023-06-23  v1.0.42     520 UI 적응
+                                            // 2023-06-30   v1.0.43    열화상 적용
+                                            // 2023-07-03   v1.0.44  파일리스트 슬라이드 속도 조절
+                                            // 2023-07-12   v1.0.55  dlenc 전용 해상도 1920 X 1080 으로 떨어뜨림
+                                            // 2023-07-20   v1.0.46  파일리스트 슬라이드 속도 다시 원상복구 (버그 수정 필요)
+                                            // 2023-08-09   v1.0.47  appDetail정보 thermal 값 전달 0 : 열화상 버튼 숨김, 1 : 열화상 버튼 노출 / 파일리스트 슬라이드 속도 조정
+                                            // 2023-09-20   v1.0.48  키패드 1.0.7 적용(방폭형)
+                                            // 2023-12-05   v1.0.49  네이버 Wav Api 연동 ( sftp 유지 중 )
+                                            // 2024-03-27   v1.0.50  Tilt적용, Sftp 변경 전 / 갤러리 호출 꺼짐현상 수정
+
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        /// 빌드시 DEBUG_MODE 제외 true
+        buildConfigField "boolean", "DEBUG_MODE", "false"           //AppDetailJson정보를 전달받지 못하면 기존 설정해 둔 테스트 서버로 접속
+        buildConfigField "boolean", "UTC_TIME_MODE", "true"         //서버에 저장되는 시간이 UTC STAMP 형식일때 사용
+        buildConfigField "boolean", "SAVE_APPDETAILINFO", "true"   //이전의 AppDetailJson정보를 내부에 저장하고있다가 없으면 사용하는 기능
+        buildConfigField "boolean", "PING_CHECK_NAVER", "true"     //중부발전은 방화벽때문에 핑체크 생략
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            applicationVariants.all { variant ->
+                variant.outputs.each { output ->
+                    def name = "wattmemo_v${variant.versionName}.apk"
+                    output.outputFileName = name
+                }
+            }
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    //뷰바인딩 -> BaseActivity 사용시 필요
+    buildFeatures{
+        viewBinding = true
+    }
+
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+//        exclude("META-INF/LICENSE")
+//        exclude("META-INF/LICENSE.txt")
+//        exclude("META-INF/license.txt")
+//        exclude("META-INF/NOTICE")
+//        exclude("META-INF/NOTICE.txt")
+//        exclude("META-INF/notice.txt")
+//        exclude("META-INF/ASL2.0")
+//        exclude("META-INF/*.kotlin_module")
+//        resources.excludes.add("META-INF/*")
+    }
+}
+
+dependencies {
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation 'androidx.core:core-ktx:1.6.0'
+    implementation 'androidx.appcompat:appcompat:1.3.1'
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.0'
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+    implementation 'com.naver.speech.clientapi:naverspeech-ncp-sdk-android:1.1.7'
+    implementation 'com.github.nkzawa:socket.io-client:0.6.0'
+    implementation 'com.jcraft:jsch:0.1.51'
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
+
+    implementation name: 'power_receiver_v1.0.4', ext: 'aar'
+//    implementation name: 'wattkeypad_v1.0.6', ext: 'aar'
+    implementation name: 'wattkeypad_v1.0.7', ext: 'aar'
+
+
+    implementation "org.jetbrains.kotlinx:kotlinx-serialization-json:1.2.1"
+
+
+    implementation 'androidx.fragment:fragment-ktx:1.3.4'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.3.5'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.3.5'
+
+
+
+    //코루틴 -> BaseActivity 사용시 필요
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.1"
+
+    //로거 -> l.kt 사용시 필요
+    implementation 'com.orhanobut:logger:2.2.0'
+
+    //Splitties -> 보일플레이트 줄여줌
+    def splitties_version = "2.1.1"
+    implementation("com.louiscad.splitties:splitties-activities:$splitties_version")
+    implementation("com.louiscad.splitties:splitties-toast:$splitties_version")
+
+    //테드 퍼미션
+    implementation 'gun0912.ted:tedpermission:2.0.0'
+
+    //리사이클러뷰 라이브러리
+    implementation 'androidx.recyclerview:recyclerview:1.2.0'
+    implementation 'com.google.android.material:material:1.3.0'
+
+    // Retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-scalars:2.9.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
+    // 쿠키매니저 연결
+    implementation "com.squareup.okhttp3:okhttp-urlconnection:4.9.1"
+
+    //OkHttp: 통신 로그 확인하기 위함
+    implementation 'com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.2'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.11.0'
+
+    //Gson -> PreferenceFunction 사용시 필요
+    implementation 'com.google.code.gson:gson:2.8.6'
+
+    //CameraX 라이브러리 - 비디오 녹화 시 사용
+    implementation "androidx.camera:camera-core:1.1.0-alpha04"
+    implementation "androidx.camera:camera-camera2:1.1.0-alpha04"
+    implementation "androidx.camera:camera-lifecycle:1.1.0-alpha04"
+    implementation "androidx.camera:camera-extensions:1.0.0-alpha24"
+    implementation 'androidx.camera:camera-view:1.0.0-alpha24'
+
+    // Lombok
+    compileOnly 'org.projectlombok:lombok:1.18.12'
+    annotationProcessor 'org.projectlombok:lombok:1.18.12'
+
+    // 애니메이션
+    def lottieVersion = "5.2.0"
+    implementation "com.airbnb.android:lottie:$lottieVersion"
+
+    // Network
+    implementation 'org.apache.httpcomponents:httpclient:4.5.1'
+    implementation 'org.apache.httpcomponents:httpcore:4.4.6'
+    implementation 'org.apache.httpcomponents:httpmime:4.3.1'
+    implementation 'com.android.support:support-annotations:25.0.0'
+    implementation 'com.squareup.okhttp3:okhttp:4.9.0'
+
+    // FFMPEG
+    implementation 'com.arthenica:mobile-ffmpeg-full-gpl:4.4'
+
+    // RxJava
+//    implementation "androidx.room:room-rxjava2:2.2.5"
+    implementation 'io.reactivex.rxjava3:rxandroid:3.0.0'
+    implementation 'io.reactivex.rxjava3:rxjava:3.0.7'
+
+
+    // exo video player
+    def exo_version = "2.14.1"
+    implementation "com.google.android.exoplayer:exoplayer:$exo_version"
+    implementation "com.google.android.exoplayer:exoplayer-ui:$exo_version"
+    implementation "com.google.android.exoplayer:exoplayer-core:$exo_version"
+}

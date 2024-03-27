@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center"
+    android:background="@drawable/popup_bg"
+    android:gravity="center">
+
+<!--    android:layout_marginTop="111px"
+            android:layout_marginLeft="120px"-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bt_edit_go_back"
+            android:gravity="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginLeft="140dp"
+            android:layout_marginTop="100dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|left"
+                android:contentDescription="hf_no_number"
+                android:text="@string/go_back"
+                android:textColor="@android:color/white"
+                android:textSize="17px"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+
+<!--    android:layout_gravity="center|top"
+android:layout_marginTop="122px"
+-->
+    <TextView
+        android:id="@+id/tv_file_title_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="hf_no_number"
+        android:layout_marginTop="130dp"
+        android:gravity="center"
+        android:text="파일 1"
+        android:textColor="#2e2e2e"
+        android:textSize="28px"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+
+<!--    android:layout_gravity="center|top"
+android:layout_height="172px"
+-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginTop="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/icon_open"
+            android:orientation="vertical">
+
+<!--android:layout_marginTop="118px"-->
+            <TextView
+                android:id="@+id/tv_show_document"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100dp"
+                android:contentDescription="hf_no_number"
+                android:gravity="center"
+                android:text="@string/open"
+                android:textColor="@color/colorWhite"
+                android:textSize="18px"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/icon_delete"
+            android:orientation="vertical">
+
+<!--android:layout_marginTop="118px"-->
+            <TextView
+                android:id="@+id/tv_delete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100dp"
+                android:contentDescription="hf_no_number"
+                android:gravity="center"
+                android:text="@string/delete"
+                android:textColor="@color/colorWhite"
+                android:textSize="18px"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+<!--
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/popup_bg"
+    android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bt_edit_go_back"
+            android:gravity="center"
+            android:layout_gravity="left|top"
+            android:layout_marginTop="111px"
+            android:layout_marginLeft="120px"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/tv_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|left"
+                android:contentDescription="hf_no_number"
+                android:text="@string/go_back"
+                android:textColor="@android:color/white"
+                android:textSize="17px"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tv_file_title_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="hf_no_number"
+        android:layout_gravity="center|top"
+        android:layout_marginTop="122px"
+        android:gravity="center"
+        android:text="파일 1"
+        android:textColor="#2e2e2e"
+        android:textSize="28px"
+        android:textStyle="bold" />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="172px"
+        android:gravity="center"
+        android:layout_gravity="center|top"
+        android:layout_marginTop="179px"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/icon_open"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/tv_show_document"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="118px"
+                android:contentDescription="hf_no_number"
+                android:gravity="center"
+                android:text="@string/open"
+                android:textColor="@color/colorWhite"
+                android:textSize="18px"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/icon_delete"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/tv_delete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="118px"
+                android:contentDescription="hf_no_number"
+                android:gravity="center"
+                android:text="@string/delete"
+                android:textColor="@color/colorWhite"
+                android:textSize="18px"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</FrameLayout>
+
+
+-->
