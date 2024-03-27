@@ -1,2 +1,3 @@
+include ':camera12'
 include ':app'
 rootProject.name = "PowerMemo"

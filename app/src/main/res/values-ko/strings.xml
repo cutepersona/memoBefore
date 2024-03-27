@@ -17,6 +17,9 @@
     <string name="flash">플래시</string>
     <string name="flash_on">켜짐</string>
     <string name="flash_off">꺼짐</string>
+    <string name="telephoto">망원</string>
+    <string name="telephoto_on">켜짐</string>
+    <string name="telephoto_off">꺼짐</string>
     <string name="capture">촬영</string>
     <string name="create_new_memo">신규 메모 작성</string>
     <string name="save_changes">변경 내용 저장 중...</string>

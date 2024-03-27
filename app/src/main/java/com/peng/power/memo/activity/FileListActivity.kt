@@ -513,10 +513,11 @@ class FileListActivity : BaseActivity<ActivityFileListBinding>() {
                     + SignalingSendData.EVENT_SFTP_CREATE_THUMBNAIL_FOLDER + fileDataList.get(
                 saveFile
             ).dbThumbnail_name)
-            l.d("getServerFile: ::::::::::::" + fileDataList.get(saveFile).dbThumbnail_name)
+            l.d("Noah ==== getServerFile: ::::::::::::" + fileDataList.get(saveFile).dbThumbnail_name)
             val imgFile = File(thumbNailPath)
+            Log.d("Noah ==== ", "getServerFile() ==== " + imgFile)
             if (!imgFile.exists()) {
-                l.d("imgFile not exists")
+                l.d("Noah ==== imgFile not exists")
                 fileDataList.get(saveFile).dbThumbnail_name?.let{
                     bindService?.sftpConnect?.downloadThumbnailFile(it){
                         l.e("download thumbnail file callback")

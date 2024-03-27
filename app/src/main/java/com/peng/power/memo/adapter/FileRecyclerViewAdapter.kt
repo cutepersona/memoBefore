@@ -13,8 +13,9 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
-import com.bumptech.glide.request.animation.GlideAnimation
+//import com.bumptech.glide.request.animation.GlideAnimation
 import com.bumptech.glide.request.target.SimpleTarget
+import com.bumptech.glide.request.transition.Transition
 import com.peng.power.memo.R
 import com.peng.power.memo.data.FileTblData
 import com.peng.power.memo.data.SignalingSendData
@@ -59,16 +60,27 @@ class FileRecyclerViewAdapter(
         }
 
         Glide.with(context)
-            .load(imgFile)
             .asBitmap()
+            .load(imgFile)
             .diskCacheStrategy(DiskCacheStrategy.NONE)
-            .skipMemoryCache(true)
+//            .skipMemoryCache(true)
             .dontAnimate()
             .into(object : SimpleTarget<Bitmap?>() {
-                override fun onResourceReady(arg0: Bitmap?, arg1: GlideAnimation<in Bitmap?>?) {
-                    // TODO Auto-generated method stub
-                    fileViewHolder.ivFileContents.setImageBitmap(arg0)
+//                override fun onResourceReady(arg0: Bitmap?, arg1: GlideAnimation<in Bitmap?>?) {
+//
+//                }
+
+                override fun onResourceReady(
+                    resource: Bitmap,
+                    transition: Transition<in Bitmap?>?
+                ) {
+                    fileViewHolder.ivFileContents.setImageBitmap(resource)
                 }
+//            .into(object : SimpleTarget<Bitmap?>() {
+//                override fun onResourceReady(arg0: Bitmap?, arg1: GlideAnimation<in Bitmap?>?) {
+//                    // TODO Auto-generated method stub
+//                    fileViewHolder.ivFileContents.setImageBitmap(arg0)
+//                }
             })
 
         fileTitleCount = position + 1

@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:contentDescription="hf_no_number">
+
+    <RelativeLayout
+        android:id="@+id/border1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="17dp">
+
+        <LinearLayout
+            android:id="@+id/zoomLevel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bt_70_black"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/zooms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/zoomlevel"
+                android:textSize="18sp"
+                android:enabled="false"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/level1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="7dp"
+                android:text="1"
+                android:enabled="false"
+                android:textColor="@color/Transparency"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/level2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2"
+                android:enabled="false"
+                android:layout_marginStart="4dp"
+                android:textColor="@color/Transparency"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/level3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3"
+                android:enabled="false"
+                android:layout_marginStart="4dp"
+                android:textColor="@color/Transparency"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/level4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4"
+                android:enabled="false"
+                android:layout_marginStart="4dp"
+                android:textColor="@color/Transparency"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/level5"
+                android:layout_toRightOf="@+id/level4"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5"
+                android:enabled="false"
+                android:layout_marginStart="4dp"
+                android:textColor="@color/Transparency"
+                android:textSize="14sp" />
+
+<!--            <RelativeLayout-->
+<!--                android:id="@+id/zoomlayout"-->
+<!--                android:layout_marginLeft="13.9dip"-->
+<!--                android:layout_toRightOf="@+id/level5"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"/>-->
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/select_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
+            android:background="@drawable/bt_n"
+            android:gravity="center"
+            android:text="1"
+            android:textColor="@color/white"
+            android:textSize="17sp" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/border2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="17dp"
+        android:layout_toRightOf="@+id/border1">
+
+        <RelativeLayout
+            android:id="@+id/displayMoveControll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bt_70_black"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/displayStop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/displayStop"
+                android:textColor="@color/Transparency"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/displayMove"
+                android:layout_toRightOf="@+id/displayStop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="@string/displayMove"
+                android:textColor="@color/Transparency"
+                android:textSize="18sp" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/select_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
+            android:background="@drawable/bt_n"
+            android:gravity="center"
+            android:text="2"
+            android:textColor="@color/white"
+            android:textSize="17sp" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/border3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="17dp"
+        android:layout_toRightOf="@+id/border2">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bt_70_black"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/beforeImg"
+                android:layout_width="70dip"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/beforePage"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/select_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
+            android:background="@drawable/bt_n"
+            android:gravity="center"
+            android:text="3"
+            android:textColor="@color/white"
+            android:textSize="17sp" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/mborder4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="17dp"
+        android:visibility="gone"
+        android:layout_toRightOf="@+id/border4">
+
+        <LinearLayout
+            android:id="@+id/small_Size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bt_70_black"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/reduction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/image_Zoom_Out"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/mSelect_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
+            android:background="@drawable/bt_n"
+            android:gravity="center"
+            android:text="3"
+            android:textColor="@color/white"
+            android:textSize="17sp" />
+
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:id="@+id/border4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="17dp"
+        android:layout_toRightOf="@+id/border3">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bt_70_black"
+            android:gravity="center">
+
+        <TextView
+            android:id="@+id/nextImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/nextPage"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        </LinearLayout>
+        <TextView
+            android:id="@+id/select_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
+            android:background="@drawable/bt_n"
+            android:gravity="center"
+            android:text="4"
+            android:textColor="@color/white"
+            android:textSize="17sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/border5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="17dp"
+        android:visibility="gone"
+        android:layout_toRightOf="@+id/mborder4">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bt_70_black"
+            android:gravity="center">
+        <TextView
+            android:id="@+id/viewerClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/closeView"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/select_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
+            android:background="@drawable/bt_n"
+            android:gravity="center"
+            android:text="4"
+            android:textColor="@color/white"
+            android:textSize="17sp" />
+
+    </RelativeLayout>
+
+
+
+
+    <TextView
+        android:id="@+id/zoomlevel_voice1"
+        android:layout_width="1px"
+        android:layout_height="1px"
+        android:text="@string/zoomlevel1" />
+
+    <TextView
+        android:id="@+id/zoomlevel_voice2"
+        android:layout_width="1px"
+        android:layout_height="1px"
+        android:text="@string/zoomlevel2" />
+
+    <TextView
+        android:id="@+id/zoomlevel_voice3"
+        android:layout_width="1px"
+        android:layout_height="1px"
+        android:text="@string/zoomlevel3" />
+
+    <TextView
+        android:id="@+id/zoomlevel_voice4"
+        android:layout_width="1px"
+        android:layout_height="1px"
+        android:text="@string/zoomlevel4" />
+
+    <TextView
+        android:id="@+id/zoomlevel_voice5"
+        android:layout_width="1px"
+        android:layout_height="1px"
+        android:text="@string/zoomlevel5" />
+
+    <TextView
+        android:id="@+id/select_item1"
+        android:layout_width="1px"
+        android:layout_height="1px"
+        android:text="@string/select1" />
+
+    <TextView
+        android:id="@+id/select_item2"
+        android:layout_width="1px"
+        android:layout_height="1px"
+        android:text="@string/select2" />
+
+    <TextView
+        android:id="@+id/select_item3"
+        android:layout_width="1px"
+        android:layout_height="1px"
+        android:text="@string/select3" />
+
+    <TextView
+        android:id="@+id/select_item4"
+        android:layout_width="1px"
+        android:layout_height="1px"
+        android:text="@string/select4" />
+
+    <TextView
+        android:id="@+id/select_item5"
+        android:layout_width="1px"
+        android:layout_height="1px"
+        android:text="@string/select5" />
+
+    <include
+        android:id="@+id/loading"
+        layout="@layout/prograssbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+
+</RelativeLayout>
+

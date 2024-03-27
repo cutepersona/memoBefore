@@ -1,0 +1,62 @@
+<resources>
+    <string name="go_back">Back</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+    <string name="eval_result">Result</string>
+    <string name="eval_refresh">Refresh</string>
+    <string name="zoom">Zoom Level</string>
+    <string name="manual_focus">Focus</string>
+    <string name="telephoto">Telephoto</string>
+    <string name="normal_quality">Normal</string>
+    <string name="high_quality">High</string>
+    <string name="flash">Flash</string>
+    <string name="flash_on">On</string>
+    <string name="flash_off">Off</string>
+    <string name="capture">Shooting</string>
+    <string name="photo">Photo</string>
+    <string name="video">Video</string>
+    <string name="show_menu">Open Menu</string>
+    <string name="hide_menu">Hide Menu</string>
+    <string name="video_start">Start</string>
+    <string name="video_stop">Stop</string>
+    <string name="video_play">Play</string>
+    <string name="permission_denied_msg">Authorization is required to execute the App.</string>
+    <string name="fail_focusing">Focusing Failure</string>
+    <string name="mute">Mute</string>
+    <string name="volume1">Volume 1</string>
+    <string name="volume2">Volume 2</string>
+    <string name="volume3">Volume 3</string>
+    <string name="volume4">Volume 4</string>
+    <string name="volume5">Volume 5</string>
+    <string name="volume6">Volume 6</string>
+    <string name="volume7">Volume 7</string>
+    <string name="volume8">Volume 8</string>
+    <string name="volume9">Volume 9</string>
+    <string name="volume10">Volume 10</string>
+    <string name="not_enough_storage">Not enough storage.</string>
+
+
+    <string name="zoomlevel">Zoom Level</string>
+    <string name="zoomlevel1">ZOOM LEVEL 1</string>
+    <string name="zoomlevel2">ZOOM LEVEL 2</string>
+    <string name="zoomlevel3">ZOOM LEVEL 3</string>
+    <string name="zoomlevel4">ZOOM LEVEL 4</string>
+    <string name="zoomlevel5">ZOOM LEVEL 5</string>
+
+    <string name="displayStop">Fix</string>
+    <string name="displayMove">Move</string>
+
+    <string name="nextPage">Next</string>
+    <string name="beforePage">Previous</string>
+    <string name="closeView">Close</string>
+
+    <string name="select1">Number 1</string>
+    <string name="select2">Number 2</string>
+    <string name="select3">Number 3</string>
+    <string name="select4">Number 4</string>
+    <string name="select5">Number 5</string>
+
+    <string name="image_Zoom_In">Zoom In</string>
+    <string name="image_Zoom_Out">Zoom Out</string>
+    <string name="image_Delete">Remove image</string>
+</resources>

@@ -17,6 +17,9 @@
     <string name="flash">Flash</string>
     <string name="flash_on">On</string>
     <string name="flash_off">Off</string>
+    <string name="telephoto">telephoto</string>
+    <string name="telephoto_on">On</string>
+    <string name="telephoto_off">Off</string>
     <string name="capture">Shooting</string>
     <string name="create_new_memo">Write New Memo</string>
     <string name="save_changes">Saving the revised contents….</string>
